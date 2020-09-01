@@ -3,10 +3,10 @@ const Note = require("../models/note");
 
 // Collect all notes from db
 notesRouter.get("/", (req, res) => {
-    Note.find({}).then((notes) => {
-      res.json(notes);
-    });
+  Note.find({}).then((notes) => {
+    res.json(notes);
   });
+});
 
 // Collect note by id
 notesRouter.get("/:id", (req, res, next) => {
